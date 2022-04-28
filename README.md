@@ -1,3 +1,19 @@
+# Описание проекта практикума
+
+[Посмотреть проект можно тут](https://foxsheldin.github.io/nfd-admin/)\
+Cайт компании находится [здесь](https://github.com/foxsheldin/need-for-drive)
+
+## Задание:
+
+Необходимо реализовать панель администратора для сайта компании по предоставления услуг каршеринга
+
+## Используемые библиотеки:
+
+Axios - библиотека для выполнения XMLHttpRequests в браузере\
+node-sass - библиотека для работы с препроцессором SASS\
+ReactRouter - библиотека для маршрутизации\
+Redux Toolkit (react-redux, @reduxjs/toolkit) - библиотека для управления состоянием приложения\
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
