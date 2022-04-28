@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/nfd-admin/static/css/main.073c9b0a.css",
+    "main.js": "/nfd-admin/static/js/main.2bbbd8c8.js",
+    "static/js/787.4f5f93c0.chunk.js": "/nfd-admin/static/js/787.4f5f93c0.chunk.js",
+    "static/media/logo.svg": "/nfd-admin/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/nfd-admin/index.html",
+    "main.073c9b0a.css.map": "/nfd-admin/static/css/main.073c9b0a.css.map",
+    "main.2bbbd8c8.js.map": "/nfd-admin/static/js/main.2bbbd8c8.js.map",
+    "787.4f5f93c0.chunk.js.map": "/nfd-admin/static/js/787.4f5f93c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.2bbbd8c8.js"
+  ]
+}
