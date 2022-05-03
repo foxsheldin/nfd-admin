@@ -1,0 +1,12 @@
+@import "./variables.scss";
+@import "./fonts.scss";
+
+/* Global */
+
+body {
+  margin: 0;
+  font-family: "Helvetica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
