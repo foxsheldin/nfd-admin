@@ -1,9 +1,14 @@
 import React from "react";
-import { Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import AuthPage from "./pages/AuthPage/AuthPage";
 import "./assets/scss/global.scss";
 
 function App() {
-  return <Routes></Routes>;
+  return (
+    <Routes>
+      <Route path="/" element={<AuthPage />} />
+    </Routes>
+  );
 }
 
 export default App;
