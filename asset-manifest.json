@@ -1,16 +1,40 @@
 {
   "files": {
-    "main.css": "/nfd-admin/static/css/main.073c9b0a.css",
-    "main.js": "/nfd-admin/static/js/main.2bbbd8c8.js",
+    "main.css": "/nfd-admin/static/css/main.e655d00a.css",
+    "main.js": "/nfd-admin/static/js/main.96f2f067.js",
     "static/js/787.4f5f93c0.chunk.js": "/nfd-admin/static/js/787.4f5f93c0.chunk.js",
-    "static/media/logo.svg": "/nfd-admin/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/Helvetica-Oblique.eot": "/nfd-admin/static/media/Helvetica-Oblique.08605b1aec20e3ecb4ef.eot",
+    "static/media/Helvetica-Oblique.ttf": "/nfd-admin/static/media/Helvetica-Oblique.385b89d1e97afbc3a77a.ttf",
+    "static/media/Helvetica.eot": "/nfd-admin/static/media/Helvetica.ca154ada530d0b077bcf.eot",
+    "static/media/Helvetica.ttf": "/nfd-admin/static/media/Helvetica.5250b533fe56a78652c7.ttf",
+    "static/media/Helvetica-Bold.eot": "/nfd-admin/static/media/Helvetica-Bold.aec34dfc049829901535.eot",
+    "static/media/Helvetica-Bold.ttf": "/nfd-admin/static/media/Helvetica-Bold.c16c91c576f997693a92.ttf",
+    "static/media/Helvetica-BoldOblique.eot": "/nfd-admin/static/media/Helvetica-BoldOblique.0ecd1e821bb8b47272c1.eot",
+    "static/media/Helvetica-BoldOblique.ttf": "/nfd-admin/static/media/Helvetica-BoldOblique.ae23ae5b1977d0d7ba0e.ttf",
+    "static/media/Helvetica-Oblique.woff": "/nfd-admin/static/media/Helvetica-Oblique.ed4e2ee575ce89c528a0.woff",
+    "static/media/Helvetica-Light.eot": "/nfd-admin/static/media/Helvetica-Light.234caf49305a36f4ead6.eot",
+    "static/media/Helvetica.woff": "/nfd-admin/static/media/Helvetica.967c07100e27e9f1d9c6.woff",
+    "static/media/Helvetica-Light.ttf": "/nfd-admin/static/media/Helvetica-Light.aaaf269072fc1539334d.ttf",
+    "static/media/Helvetica-Bold.woff": "/nfd-admin/static/media/Helvetica-Bold.497fd64dc4e695c859d5.woff",
+    "static/media/Helvetica-BoldOblique.woff": "/nfd-admin/static/media/Helvetica-BoldOblique.4b04c1dd7b053b62c57a.woff",
+    "static/media/Helvetica-Bold.woff2": "/nfd-admin/static/media/Helvetica-Bold.ab9fbc64132a3eb6b7ac.woff2",
+    "static/media/Helvetica.woff2": "/nfd-admin/static/media/Helvetica.fbff4e73a10216586fec.woff2",
+    "static/media/Helvetica-Oblique.woff2": "/nfd-admin/static/media/Helvetica-Oblique.6e25fdb5b9702d04592b.woff2",
+    "static/media/Helvetica-BoldOblique.woff2": "/nfd-admin/static/media/Helvetica-BoldOblique.469f7cd115b51f0d5b26.woff2",
+    "static/media/Helvetica-LightOblique.eot": "/nfd-admin/static/media/Helvetica-LightOblique.3d4c9add5a8421bcde30.eot",
+    "static/media/Helvetica-LightOblique.ttf": "/nfd-admin/static/media/Helvetica-LightOblique.c50c8d3fa7366fd6cb6b.ttf",
+    "static/media/Helvetica-Light.woff": "/nfd-admin/static/media/Helvetica-Light.3b9b61044d30d3978cf2.woff",
+    "static/media/Helvetica-Light.woff2": "/nfd-admin/static/media/Helvetica-Light.bf78b413d46702ad99ce.woff2",
+    "static/media/Helvetica-LightOblique.woff": "/nfd-admin/static/media/Helvetica-LightOblique.7b4616bdbdb2a9aff30e.woff",
+    "static/media/Helvetica-LightOblique.woff2": "/nfd-admin/static/media/Helvetica-LightOblique.01f4c5b00e0d4569b5ac.woff2",
     "index.html": "/nfd-admin/index.html",
-    "main.073c9b0a.css.map": "/nfd-admin/static/css/main.073c9b0a.css.map",
-    "main.2bbbd8c8.js.map": "/nfd-admin/static/js/main.2bbbd8c8.js.map",
+    "static/media/logo.svg": "/nfd-admin/static/media/logo.02d5ddcf95acf0a67bb71c55be9075ff.svg",
+    "main.e655d00a.css.map": "/nfd-admin/static/css/main.e655d00a.css.map",
+    "main.96f2f067.js.map": "/nfd-admin/static/js/main.96f2f067.js.map",
     "787.4f5f93c0.chunk.js.map": "/nfd-admin/static/js/787.4f5f93c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.2bbbd8c8.js"
+    "static/css/main.e655d00a.css",
+    "static/js/main.96f2f067.js"
   ]
 }
