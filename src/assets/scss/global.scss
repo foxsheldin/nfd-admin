@@ -43,6 +43,7 @@ body {
   }
 
   &::placeholder {
+    font-family: "Helvetica", -apple-system, BlinkMacSystemFont, sans-serif;
     color: $blue-gray-dark;
   }
 
