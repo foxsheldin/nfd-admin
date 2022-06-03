@@ -1,34 +1,17 @@
-import { authAPI } from "../../api/api";
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AxiosBasicCredentials, AxiosError } from "axios";
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface IAuthInitialState {
-  username: string | null;
-  password: string | null;
   refresh_token: string | null;
   expires_in: number | null;
   isAuth: boolean;
+  errorServerMessage: string | null;
 }
 
-export const login = createAsyncThunk(
-  "auth/login",
-  async (loginData: AxiosBasicCredentials, { rejectWithValue, dispatch }) => {
-    try {
-      const response = await authAPI.login(loginData);
-      localStorage.setItem("token", response.data.access_token);
-    } catch (e) {
-      const error = e as Error | AxiosError;
-      rejectWithValue(error.message);
-    }
-  }
-);
-
 const initialState: IAuthInitialState = {
-  username: localStorage.getItem("userEmail"),
-  password: localStorage.getItem("userPassword"),
   refresh_token: localStorage.getItem("refreshToken"),
   expires_in: null,
   isAuth: false,
+  errorServerMessage: null,
 };
 
 export const authSlice = createSlice({
@@ -40,15 +23,14 @@ export const authSlice = createSlice({
     },
     setLogoutData: (state) => {
       state.isAuth = false;
-      localStorage.removeItem("userEmail");
-      localStorage.removeItem("userPassword");
-      localStorage.removeItem("accessToken");
-      localStorage.removeItem("refreshToken");
-      localStorage.removeItem("tokenExpires");
+    },
+    setErrorServerMessage: (state, action) => {
+      state.errorServerMessage = action.payload;
     },
   },
 });
 
-export const { setAuthData, setLogoutData } = authSlice.actions;
+export const { setAuthData, setLogoutData, setErrorServerMessage } =
+  authSlice.actions;
 
 export default authSlice.reducer;

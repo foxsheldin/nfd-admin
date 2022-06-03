@@ -1,18 +1,22 @@
 import React, { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { authAPI } from "../../api/api";
-import { useAppDispatch } from "../../redux";
-import { setLogoutData } from "../../redux/reducers/authSlice";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { RootState, useAppDispatch } from "../../redux";
+import { logout } from "../../redux/reducers/authThunkCreators";
 
 const OrdersPage = () => {
+  const { isAuth } = useSelector((state: RootState) => state.auth);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const location = useLocation();
+
+  useEffect(() => {
+    if (!isAuth) {
+      navigate("/");
+    }
+  }, [isAuth]);
 
   const logoutHander = () => {
-    authAPI.logout();
-    dispatch(setLogoutData());
-    navigate("/");
+    dispatch(logout());
   };
 
   return (

@@ -3,10 +3,10 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Field, Form } from "react-final-form";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { authAPI } from "../../api/api";
 import { ReactComponent as LogoIcon } from "../../assets/icons/logo.svg";
 import { RootState, useAppDispatch } from "../../redux";
 import { setAuthData } from "../../redux/reducers/authSlice";
+import { login } from "../../redux/reducers/authThunkCreators";
 import "./styles.scss";
 
 const required = (value: string) => (value ? undefined : "Заполните поле");
@@ -22,36 +22,21 @@ const composeValidators =
 
 const AuthPage = () => {
   const dispatch = useAppDispatch();
-  const { isAuth } = useSelector((state: RootState) => state.auth);
+  const { isAuth, errorServerMessage } = useSelector(
+    (state: RootState) => state.auth
+  );
   const navigate = useNavigate();
-  const [errorServerMessage, setErrorServerMessage] = useState<string>("");
 
   useEffect(() => {
     if (isAuth || localStorage.getItem("accessToken")) {
+      dispatch(setAuthData());
       navigate("/admin-panel/orders");
     }
   }, [isAuth, localStorage.getItem("accessToken")]);
 
   const onFormSubmit = useCallback(
     (data: AxiosBasicCredentials) => {
-      authAPI
-        .login(data)
-        .then((response) => {
-          setErrorServerMessage("");
-          localStorage.setItem("accessToken", response.data.access_token);
-          localStorage.setItem("refreshToken", response.data.refresh_token);
-          localStorage.setItem("tokenExpires", response.data.expires_in);
-          dispatch(setAuthData());
-          navigate("/admin-panel/orders");
-        })
-        .catch((response) => {
-          if (response.response.status === 401) {
-            console.log(response);
-            setErrorServerMessage("Неправильный логин или пароль");
-          } else {
-            setErrorServerMessage("Ошибка сервера " + response.response.status);
-          }
-        });
+      dispatch(login(data));
     },
     [errorServerMessage]
   );
