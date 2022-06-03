@@ -12,6 +12,7 @@ body {
 }
 
 .field-form {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 8.5px;
@@ -31,6 +32,7 @@ body {
   border: 0.5px solid #becad6;
   box-sizing: border-box;
   border-radius: 3px;
+  font-family: "Helvetica", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 11px;
   line-height: 13px;
 
@@ -39,6 +41,23 @@ body {
     outline: 0;
     border: 0.5px solid $blue;
   }
+
+  &::placeholder {
+    color: $blue-gray-dark;
+  }
+
+  &_error {
+    border-color: $red;
+  }
+}
+
+.error-message {
+  position: absolute;
+  bottom: -14px;
+  width: 60%;
+  color: $red;
+  font-size: 10px;
+  line-height: 11px;
 }
 
 .link {
@@ -64,7 +83,9 @@ body {
   background-color: $blue;
   box-sizing: border-box;
   border-radius: 4px;
-  padding: 10px;
+  padding: 0 10px;
+
+  font-family: "Helvetica", -apple-system, BlinkMacSystemFont, sans-serif;
 
   &:hover,
   &:focus {

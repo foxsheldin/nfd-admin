@@ -24,6 +24,7 @@
       justify-content: center;
       column-gap: 11.5px;
       align-items: center;
+      color: $blue-gray;
       font-size: 24px;
       line-height: 28px;
 
@@ -45,6 +46,7 @@
   padding: 0 17px;
 
   &__header {
+    color: $blue-gray;
     font-size: 17.5px;
     line-height: 20px;
     text-align: center;
