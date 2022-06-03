@@ -1,10 +1,11 @@
 import { AxiosBasicCredentials } from "axios";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Field, Form } from "react-final-form";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { authAPI } from "../../api/api";
 import { ReactComponent as LogoIcon } from "../../assets/icons/logo.svg";
-import { useAppDispatch } from "../../redux";
+import { RootState, useAppDispatch } from "../../redux";
 import { setAuthData } from "../../redux/reducers/authSlice";
 import "./styles.scss";
 
@@ -21,8 +22,15 @@ const composeValidators =
 
 const AuthPage = () => {
   const dispatch = useAppDispatch();
+  const { isAuth } = useSelector((state: RootState) => state.auth);
   const navigate = useNavigate();
   const [errorServerMessage, setErrorServerMessage] = useState<string>("");
+
+  useEffect(() => {
+    if (isAuth || localStorage.getItem("accessToken")) {
+      navigate("/admin-panel/orders");
+    }
+  }, [isAuth, localStorage.getItem("accessToken")]);
 
   const onFormSubmit = useCallback(
     (data: AxiosBasicCredentials) => {
