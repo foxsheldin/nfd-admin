@@ -1,0 +1,99 @@
+@import "./variables.scss";
+@import "./fonts.scss";
+
+/* Global */
+
+body {
+  margin: 0;
+  font-family: "Helvetica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.field-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8.5px;
+  margin-top: 16px;
+}
+
+.label {
+  color: $blue-gray-dark;
+  width: max-content;
+  font-size: 10.5px;
+  line-height: 12px;
+}
+
+.input {
+  color: $blue-gray;
+  padding: 8px 11px;
+  border: 0.5px solid #becad6;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: "Helvetica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    border: 0.5px solid $blue;
+  }
+
+  &::placeholder {
+    font-family: "Helvetica", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: $blue-gray-dark;
+  }
+
+  &_error {
+    border-color: $red;
+  }
+}
+
+.error-message {
+  position: absolute;
+  bottom: -14px;
+  width: 60%;
+  color: $red;
+  font-size: 10px;
+  line-height: 11px;
+}
+
+.link {
+  color: $blue;
+  font-size: 10.5px;
+  line-height: 12px;
+
+  &:hover,
+  &:focus {
+    color: darken($blue, 10%);
+  }
+
+  &:active {
+    color: darken($blue, 20%);
+  }
+}
+
+.button {
+  min-width: 110px;
+  min-height: 29px;
+  color: $white;
+  border: 0.5px solid $blue;
+  background-color: $blue;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0 10px;
+
+  font-family: "Helvetica", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  &:hover,
+  &:focus {
+    background-color: darken($blue, 5%);
+  }
+
+  &:active {
+    background-color: darken($blue, 10%);
+  }
+}

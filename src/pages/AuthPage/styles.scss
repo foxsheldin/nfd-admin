@@ -1,0 +1,70 @@
+@import "../../assets/scss/variables.scss";
+
+.admin-page {
+  background-color: $bg-admin;
+  width: 100vw;
+  height: 100vh;
+
+  & .authorization {
+    position: relative;
+    top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $tablet-width) {
+      width: 376px;
+    }
+
+    @media (min-height: 385px) {
+      top: 12.8%;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: center;
+      column-gap: 11.5px;
+      align-items: center;
+      color: $blue-gray;
+      font-size: 24px;
+      line-height: 28px;
+
+      & svg {
+        width: 44.5px;
+        height: 44.5px;
+      }
+    }
+
+    &__form {
+      margin-top: 16.5px;
+    }
+  }
+}
+
+.auth-form {
+  background-color: $white;
+  border-radius: 9px;
+  padding: 0 17px;
+
+  &__header {
+    color: $blue-gray;
+    font-size: 17.5px;
+    line-height: 20px;
+    text-align: center;
+    padding: 19px 0;
+  }
+
+  &__fields {
+    width: 100%;
+  }
+
+  &__actions {
+    padding-top: 15px;
+    padding-bottom: 20.5px;
+  }
+
+  & .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
