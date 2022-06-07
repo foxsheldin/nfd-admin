@@ -34,6 +34,10 @@ body {
   overflow: hidden;
 }
 
+.bg-content {
+  background-color: $bg-admin;
+}
+
 /* Form Elements */
 
 .field-form {
@@ -142,6 +146,8 @@ body {
   }
 }
 
+/* Button */
+
 .button {
   min-width: 110px;
   min-height: 29px;
@@ -161,5 +167,171 @@ body {
 
   &:active {
     background-color: darken($blue, 10%);
+  }
+
+  &_orders {
+    background: $white;
+    border: 0.5px solid $gray-select;
+    color: $black;
+    min-width: 72px;
+
+    &:hover,
+    &:focus {
+      background-color: $blue;
+      color: $white;
+    }
+
+    &:active {
+      background-color: darken($gray-light, 10%);
+    }
+
+    svg {
+      margin-right: 3.5px;
+    }
+  }
+}
+
+/* Button Group */
+
+.group-button {
+  & > .button:first-child {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .button {
+    border-radius: 0;
+  }
+
+  & > .button:last-child {
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+/* Checkbox */
+
+.checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 36px;
+  row-gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 21px;
+
+  &__item {
+    position: relative;
+    color: $gray;
+
+    .checkbutton {
+      & + label::before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 0;
+        width: 13px;
+        height: 13px;
+        border: 0.5px solid $gray-select;
+        border-radius: 1px;
+      }
+
+      &:checked + label::after {
+        content: url(../icons/checkbox-on.svg);
+        position: absolute;
+        width: 8px;
+        height: 6px;
+        top: 1px;
+        left: -16px;
+      }
+
+      &:hover + label::before,
+      &:focus + label::before,
+      &:checked + label::before {
+        border-color: $main-accent;
+      }
+
+      &:hover + label,
+      &:focus + label,
+      &:checked + label {
+        color: $black;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Main interface */
+
+.page-title {
+  font-size: 29px;
+  line-height: 33px;
+  letter-spacing: -0.725px;
+  color: $blue-gray;
+  margin: 28.5px 0;
+}
+
+.card {
+  background-color: $white;
+  box-shadow: 0px 2px 0px rgba(90, 97, 105, 0.11),
+    0px 4px 8px rgba(90, 97, 105, 0.12), 0px 10px 10px rgba(90, 97, 105, 0.06),
+    0px 7px 70px rgba(90, 97, 105, 0.1);
+  border-radius: 9px;
+
+  &__top,
+  &__bottom {
+    box-shadow: 0px -0.5px 0px #e0e2e8, 0px 0.5px 0px #e0e2e8;
+    padding: 21px;
+  }
+
+  &__top {
+    padding: 16px 21px;
+  }
+}
+
+.text {
+  &_black {
+    color: $black;
+  }
+}
+
+.label {
+  width: max-content;
+}
+
+/* Paginate */
+
+.paginate {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  column-gap: 7px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: -0.471429px;
+  color: $blue;
+
+  &__page,
+  &__prev-page,
+  &__next-page {
+    cursor: pointer;
+  }
+
+  &__active {
+    border-radius: 50px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid $gray;
+    padding: 2px 6px;
+    border-color: $blue;
+    background-color: $blue;
+    color: $white;
   }
 }
