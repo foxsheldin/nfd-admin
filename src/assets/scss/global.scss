@@ -11,6 +11,31 @@ body {
   line-height: 16px;
 }
 
+.main-wrapper {
+  margin-left: 10px;
+  margin-right: 10px;
+
+  @media (min-width: $desktop-min-width) {
+    margin-left: 27px;
+    margin-right: 27px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: (0 0 0 0);
+  overflow: hidden;
+}
+
+/* Form Elements */
+
 .field-form {
   position: relative;
   display: flex;
@@ -33,6 +58,7 @@ body {
   box-sizing: border-box;
   border-radius: 3px;
   font-family: "Helvetica", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
   font-size: 11px;
   line-height: 13px;
 
@@ -44,11 +70,47 @@ body {
 
   &::placeholder {
     font-family: "Helvetica", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
     color: $blue-gray-dark;
   }
 
   &_error {
     border-color: $red;
+  }
+
+  &_search {
+    height: 34px;
+    border: 0;
+    outline: 0;
+    width: 100%;
+
+    font-family: "Helvetica", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: -0.0928572px;
+
+    &::placeholder {
+      color: $blue-gray-dark;
+    }
+
+    &:hover,
+    &:focus {
+      border: 0.5px solid $blue;
+
+      &::-webkit-search-cancel-button {
+        opacity: 1;
+      }
+    }
+
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      height: 10px;
+      width: 10px;
+      fill: $blue;
+      content: url("../icons/search-cancel.svg");
+      opacity: 0.5;
+    }
   }
 }
 
@@ -73,6 +135,10 @@ body {
 
   &:active {
     color: darken($blue, 20%);
+  }
+
+  &_none-decoration {
+    text-decoration: none;
   }
 }
 
