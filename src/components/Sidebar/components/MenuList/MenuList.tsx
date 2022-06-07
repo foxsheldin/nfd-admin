@@ -29,11 +29,20 @@ const sidebarMenuItems: Array<IMenuItems> = [
   { image: <MenuItemsLogo7 />, label: "Menu 7", linkTo: "menu" },
 ];
 
-const MenuList = () => {
+const MenuList = ({
+  setOpenMenu,
+}: {
+  setOpenMenu: (isOpenMenu: boolean) => void;
+}) => {
   return (
     <div className="menu">
       {sidebarMenuItems.map((item, index) => (
-        <NavLink to={item.linkTo} className="menu__item" key={index}>
+        <NavLink
+          to={item.linkTo}
+          className="menu__item"
+          key={index}
+          onClick={() => setOpenMenu(false)}
+        >
           {item.image}
           {item.label}
         </NavLink>

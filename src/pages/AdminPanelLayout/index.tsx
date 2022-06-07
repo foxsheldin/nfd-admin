@@ -10,7 +10,7 @@ const AdminPanelLayout = () => {
 
   return (
     <div className="admin-panel-layout">
-      <Sidebar isOpenMenu={isOpenMenu} />
+      <Sidebar isOpenMenu={isOpenMenu} setOpenMenu={setOpenMenu} />
       <div className="panel">
         <MainHeader isOpenMenu={isOpenMenu} setOpenMenu={setOpenMenu} />
         <Outlet />

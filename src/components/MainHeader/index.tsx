@@ -16,7 +16,7 @@ const MainHeader = ({
   isOpenMenu: boolean;
   setOpenMenu: (isOpenMenu: boolean) => void;
 }) => {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isDropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
   const { isAuth } = useSelector((state: RootState) => state.auth);
   const dispatch = useAppDispatch();
