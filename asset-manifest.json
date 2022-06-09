@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nfd-admin/static/css/main.38bff326.css",
-    "main.js": "/nfd-admin/static/js/main.4bd35b37.js",
+    "main.css": "/nfd-admin/static/css/main.b5311baa.css",
+    "main.js": "/nfd-admin/static/js/main.ed12b172.js",
     "static/js/787.4f5f93c0.chunk.js": "/nfd-admin/static/js/787.4f5f93c0.chunk.js",
     "static/media/Helvetica-Oblique.ttf": "/nfd-admin/static/media/Helvetica-Oblique.5c03f243e475af718145.ttf",
     "static/media/Helvetica.ttf": "/nfd-admin/static/media/Helvetica.06113bf748ae7dc33e05.ttf",
@@ -125,12 +125,12 @@
     "static/media/button-done.svg": "/nfd-admin/static/media/button-done.35a8bd90455c6a26240a44fa53938483.svg",
     "static/media/checkbox-on.svg": "/nfd-admin/static/media/checkbox-on.a161b2e3416f26db5d41.svg",
     "static/media/dropdown.svg": "/nfd-admin/static/media/dropdown.e709e3e8126acd27b6f4998529bcde32.svg",
-    "main.38bff326.css.map": "/nfd-admin/static/css/main.38bff326.css.map",
-    "main.4bd35b37.js.map": "/nfd-admin/static/js/main.4bd35b37.js.map",
+    "main.b5311baa.css.map": "/nfd-admin/static/css/main.b5311baa.css.map",
+    "main.ed12b172.js.map": "/nfd-admin/static/js/main.ed12b172.js.map",
     "787.4f5f93c0.chunk.js.map": "/nfd-admin/static/js/787.4f5f93c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.38bff326.css",
-    "static/js/main.4bd35b37.js"
+    "static/css/main.b5311baa.css",
+    "static/js/main.ed12b172.js"
   ]
 }
