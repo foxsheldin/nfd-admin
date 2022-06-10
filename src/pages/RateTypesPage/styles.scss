@@ -1,0 +1,63 @@
+@import "../../assets/scss/variables.scss";
+
+.rate-types-page {
+  & .card {
+    &__top {
+      text-align: end;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: max-content;
+    }
+
+    & .rate-types {
+      &__list {
+        min-width: 300px;
+        height: 30vh;
+        overflow: auto;
+
+        @media (min-width: $tablet-width) {
+          width: 685px;
+        }
+
+        &::-webkit-scrollbar {
+          width: 8px;
+          background-color: $white;
+          border-left: 1px solid $gray-light;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          width: 2px;
+          background-color: $gray;
+          border-radius: 4px;
+          border: 2px solid transparent;
+          background-clip: content-box;
+        }
+      }
+
+      &__item,
+      &__header {
+        display: grid;
+        grid-template-columns: 100px 1fr max-content;
+        row-gap: 5px;
+        padding: 10px 21px;
+        color: $blue-gray;
+        box-shadow: 0px -0.5px 0px #e0e2e8, 0px 0.5px 0px #e0e2e8;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: -0.377143px;
+
+        & > .name,
+        & > .duration {
+          padding: 5px;
+        }
+
+        & > .button {
+          align-self: center;
+          min-width: min-content;
+          min-height: min-content;
+        }
+      }
+    }
+  }
+}
