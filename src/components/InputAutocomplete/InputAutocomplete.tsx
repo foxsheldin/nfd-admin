@@ -62,7 +62,7 @@ const InputAutocomplete = ({
     <div className={"input-autocomplete " + className}>
       <div className="input-with-icon">
         <input
-          type="text"
+          type="search"
           name={name}
           id={name}
           className="input"
@@ -77,12 +77,12 @@ const InputAutocomplete = ({
       </div>
       {displayAutocomplete && (
         <div className="autocomplete">
-          {searchValues?.map((item) => {
+          {searchValues?.map((item, index) => {
             return (
               <div
                 className="autocomplete__item"
                 onClick={() => handleClickAutocomplete(item)}
-                key={item}
+                key={item + "-" + index}
               >
                 {item}
               </div>

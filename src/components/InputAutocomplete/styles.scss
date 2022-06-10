@@ -5,12 +5,34 @@
 }
 
 .input-autocomplete {
-  & .input {
-    width: 110px;
-  }
-
   .input-with-icon {
     position: relative;
+
+    & > .input {
+      width: 110px;
+
+      &:focus {
+        &::-webkit-search-cancel-button {
+          opacity: 1;
+        }
+
+        & + .icon {
+          display: none;
+        }
+      }
+
+      &::-webkit-search-cancel-button {
+        position: relative;
+        -webkit-appearance: none;
+        height: 5px;
+        width: 5px;
+        right: -7px;
+        background: url("../../assets/icons/search-cancel.svg") no-repeat 50%
+          50%;
+        background-size: contain;
+        opacity: 0;
+      }
+    }
 
     & > .icon {
       position: absolute;
@@ -30,6 +52,7 @@
     z-index: 3;
     overflow-y: auto;
     color: $blue-gray;
+    font-size: 11px;
 
     &__item {
       padding: 8px;
