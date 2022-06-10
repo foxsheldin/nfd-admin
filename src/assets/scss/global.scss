@@ -189,6 +189,19 @@ body {
       margin-right: 3.5px;
     }
   }
+
+  &_red {
+    background-color: $red;
+
+    &:hover,
+    &:focus {
+      background-color: darken($red, 5%);
+    }
+
+    &:active {
+      background-color: darken($red, 10%);
+    }
+  }
 }
 
 /* Button Group */
@@ -291,6 +304,10 @@ body {
 .text {
   &_black {
     color: $black;
+  }
+
+  &_bold {
+    font-weight: 700;
   }
 }
 
