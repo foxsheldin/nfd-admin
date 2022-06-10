@@ -1,0 +1,197 @@
+@import "../../assets/scss/variables.scss";
+
+.main-header {
+  box-shadow: 0px 2.5px 9.5px rgba(90, 97, 105, 0.12);
+
+  & .main-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 68px;
+
+    & .mobile-menu {
+      align-self: center;
+
+      &__toggle {
+        position: relative;
+        width: 33px;
+        height: 33px;
+        background-color: $white;
+        cursor: pointer;
+        border: none;
+
+        &:hover::before,
+        &:focus::before {
+          background-color: $blue;
+          box-shadow: 0 8px 0 0 $blue, 0 16px 0 0 $blue;
+        }
+      }
+
+      &__toggle::before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 20px;
+        height: 2px;
+        background-color: $blue-gray;
+        box-shadow: 0 8px 0 0 $blue-gray, 0 16px 0 0 $blue-gray;
+      }
+
+      @media (min-width: $desktop-min-width) {
+        display: none;
+      }
+    }
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    width: 14px;
+    height: 50%;
+    cursor: pointer;
+    margin-right: 9px;
+
+    &:hover path,
+    &:focus path {
+      fill: $blue;
+    }
+  }
+
+  @media (max-width: 405px) {
+    width: 40%;
+  }
+}
+
+.profile {
+  display: flex;
+
+  &__notifications {
+    padding: 23px 18px;
+
+    @media (min-width: 479px) {
+      box-shadow: 0.5px 0px 0px #cacedb, -0.5px 0px 0px #cacedb;
+    }
+
+    box-shadow: 0.5px 0px 0px #cacedb;
+
+    svg {
+      width: 15px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $bg-admin-light;
+
+      svg path {
+        fill: $blue;
+      }
+    }
+
+    & .count-notify {
+      position: relative;
+      bottom: 50%;
+      left: 60%;
+
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 9px;
+      text-decoration: none;
+      text-align: center;
+      color: $white;
+      background-color: $red;
+      border-radius: 50%;
+    }
+  }
+
+  &__menu {
+    margin-left: 1px;
+  }
+
+  & .user-menu {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px 1fr 10px;
+    align-items: center;
+    padding-left: 10px;
+    min-width: 100px;
+
+    &:hover,
+    &:focus {
+      background-color: $bg-admin-light;
+
+      & .user-menu__dropdown-icon path {
+        fill: $blue;
+      }
+    }
+
+    &__image {
+      width: 30px;
+      height: 30px;
+      margin-right: 13px;
+    }
+
+    &__username {
+      color: $blue-gray;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: -0.471429px;
+    }
+
+    & .dropdown {
+      position: absolute;
+      z-index: 2;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background-color: $white;
+      border: 0.5px solid $shadow-gray;
+      border-bottom: 0;
+
+      &__item {
+        display: block;
+        text-decoration: none;
+        color: $blue-gray;
+        padding: 20px 32px;
+
+        box-shadow: inset 0px -1px 0px $shadow-gray;
+
+        &:hover,
+        &:focus {
+          color: $blue;
+          background-color: $bg-admin-light;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &__notifications {
+      padding: 23px 26px;
+
+      svg {
+        width: auto;
+      }
+    }
+
+    & .user-menu {
+      grid-template-columns: 55px 1fr 10px;
+      padding-left: 25px;
+      min-width: 168px;
+
+      &__image {
+        width: 42px;
+        height: 42px;
+      }
+
+      &__username {
+        font-size: 15px;
+        line-height: 17px;
+      }
+    }
+  }
+}

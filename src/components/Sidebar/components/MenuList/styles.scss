@@ -1,0 +1,35 @@
+@import "../../../../assets/scss/variables.scss";
+
+.menu {
+  margin-top: 1px;
+
+  &__item {
+    display: block;
+    text-decoration: none;
+    color: $blue-gray;
+    padding: 20px 32px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      margin-right: 13.5px;
+    }
+
+    box-shadow: inset 0px -1px 0px $shadow-gray;
+
+    &:hover,
+    &:focus {
+      color: $blue;
+
+      svg path {
+        fill: $blue;
+      }
+    }
+
+    &.active,
+    &:active {
+      background-color: $bg-admin-light;
+      box-shadow: inset 0px -1px 0px $shadow-gray, inset 4px 0px 0px #007bff;
+    }
+  }
+}
