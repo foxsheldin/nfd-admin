@@ -7,7 +7,7 @@ import "./styles.scss";
 import { useSelector } from "react-redux";
 import { RootState, useAppDispatch } from "../../redux";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../../redux/reducers/authThunkCreators";
+import { logout } from "../../redux/reducers/auth/authThunkCreators";
 
 const MainHeader = ({
   isOpenMenu,

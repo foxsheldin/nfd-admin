@@ -2,7 +2,7 @@ import React from "react";
 
 interface IPropsCheckbox {
   id: string;
-  onChange: () => void;
+  onChange?: () => void;
   checked: boolean;
   textLabel: string;
 }

@@ -5,8 +5,8 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as LogoIcon } from "../../assets/icons/logo.svg";
 import { RootState, useAppDispatch } from "../../redux";
-import { setAuthData } from "../../redux/reducers/authSlice";
-import { login } from "../../redux/reducers/authThunkCreators";
+import { setAuthData } from "../../redux/reducers/auth/authSlice";
+import { login } from "../../redux/reducers/auth/authThunkCreators";
 import "./styles.scss";
 
 const required = (value: string) => (value ? undefined : "Заполните поле");
