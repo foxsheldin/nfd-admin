@@ -1,0 +1,78 @@
+@import "../../../../assets/scss/variables.scss";
+
+.orders {
+  height: 267px;
+  overflow-y: auto;
+  color: $gray-card;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.408571px;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: $white;
+    border-left: 1px solid $gray-light;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 2px;
+    background-color: $gray;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 10px;
+    align-items: center;
+    min-height: 89px;
+    padding: 5px 21px;
+    justify-content: space-around;
+
+    @media (min-width: $tablet-width) {
+      justify-content: space-between;
+    }
+
+    &:hover {
+      background-color: $gray-light;
+    }
+
+    & > .car-image {
+      object-fit: cover;
+      height: 63px;
+      width: 138px;
+    }
+
+    & .info {
+      width: 27%;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    & > .additionally {
+      display: flex;
+      flex-direction: column;
+      width: 100px;
+
+      & .checkbutton:hover + label,
+      & .checkbutton:focus + label,
+      & .checkbutton:checked + label {
+        cursor: default;
+      }
+    }
+
+    & .amount-money {
+      font-family: "Helvetica";
+      font-size: 24px;
+      line-height: 28px;
+      color: $black;
+      width: 17%;
+    }
+  }
+}

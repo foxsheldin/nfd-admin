@@ -1,0 +1,24 @@
+@import "../../assets/scss/variables.scss";
+
+.orders-page {
+  & .filters {
+    display: flex;
+    justify-content: space-between;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 15px;
+      row-gap: 10px;
+      margin-right: 15px;
+    }
+
+    &__action {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 15px;
+      row-gap: 10px;
+      justify-content: end;
+    }
+  }
+}

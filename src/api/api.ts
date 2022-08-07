@@ -56,3 +56,42 @@ export const authAPI = {
     return instance.get("auth/check");
   },
 };
+
+export const databaseAPI = {
+  getOrders(offset: number, limit: number = 6) {
+    return instance.get("db/order", {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+      params: {
+        offset,
+        limit,
+      },
+    });
+  },
+  getOrder(orderId: string) {
+    return instance.get(`db/order/${orderId}`);
+  },
+  getCars(category: any = null) {
+    return instance.get("db/car", {
+      params: {
+        categoryId: category?.id,
+      },
+    });
+  },
+  getCities() {
+    return instance.get("db/city");
+  },
+  getOrderStatus() {
+    return instance.get("db/orderStatus");
+  },
+  getCategories() {
+    return instance.get("db/category");
+  },
+  getRate() {
+    return instance.get("db/rate");
+  },
+  getRateType() {
+    return instance.get("db/rateType");
+  },
+};

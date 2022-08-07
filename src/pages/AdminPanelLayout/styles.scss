@@ -1,0 +1,14 @@
+@import "../../assets/scss/variables.scss";
+
+.admin-panel-layout {
+  @media (min-width: $desktop-min-width) {
+    display: grid;
+    grid-template-columns: 285px 1fr;
+  }
+
+  & .panel {
+    display: grid;
+    grid-template-rows: 68px 1fr 68px;
+    height: 100vh;
+  }
+}
