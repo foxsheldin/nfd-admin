@@ -45,7 +45,6 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 8.5px;
-  margin-top: 16px;
 }
 
 .label {
@@ -115,6 +114,57 @@ body {
       content: url("../icons/search-cancel.svg");
       opacity: 0.5;
     }
+  }
+}
+
+/* Classes for Input [type = "FILE"] */
+
+.select-file-input {
+  position: relative;
+  border: 0.5px solid $gray-select;
+  border-radius: 4px;
+  background-color: $white;
+  padding: -1px;
+  max-width: 231px;
+  height: 29px;
+  display: flex;
+  justify-content: space-between;
+
+  &__filename {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: -0.175439px;
+    padding: 0 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__browse {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    background: #e9ecef;
+    border: 0.5px solid $gray-select;
+    position: relative;
+    top: 0;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > .input_file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    position: absolute;
+    z-index: -10;
   }
 }
 
@@ -192,6 +242,7 @@ body {
 
   &_red {
     background-color: $red;
+    border-color: $red;
 
     &:hover,
     &:focus {
@@ -201,6 +252,29 @@ body {
     &:active {
       background-color: darken($red, 10%);
     }
+  }
+
+  &_gray {
+    background-color: #e9ecef;
+    border-color: #e9ecef;
+    color: $black;
+
+    &:hover,
+    &:focus {
+      background-color: darken(#e9ecef, 5%);
+    }
+
+    &:active {
+      background-color: darken(#e9ecef, 10%);
+    }
+  }
+
+  &_plus {
+    width: 30px;
+    height: 30px;
+    background-color: $white;
+    border: 1px solid #becad6;
+    border-radius: 4px;
   }
 }
 
@@ -234,7 +308,8 @@ body {
 
   &__item {
     position: relative;
-    color: $gray;
+    color: $blue-gray-dark;
+    border-radius: 2px;
 
     .checkbutton {
       & + label::before {
@@ -258,14 +333,17 @@ body {
       }
 
       &:hover + label::before,
-      &:focus + label::before,
+      &:focus + label::before {
+        border-color: $blue;
+      }
+
       &:checked + label::before {
-        border-color: $main-accent;
+        border-color: $blue;
+        background-color: $blue;
       }
 
       &:hover + label,
-      &:focus + label,
-      &:checked + label {
+      &:focus + label {
         color: $black;
         cursor: pointer;
       }
@@ -350,5 +428,48 @@ body {
     border-color: $blue;
     background-color: $blue;
     color: $white;
+  }
+}
+
+/* Progress Bar */
+
+.progressbar {
+  padding: 16px 21px;
+
+  & &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  & &__title {
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: -0.408571px;
+    color: #868e96;
+  }
+
+  & &__percent {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.345714px;
+    color: #5a6169;
+  }
+
+  & &-container {
+    box-shadow: inset 0px 0.5px 4px rgba(0, 0, 0, 0.25);
+    background-color: $white;
+    border-radius: 4px;
+
+    & > div {
+      background-color: $blue !important;
+    }
+  }
+
+  & &-label {
+    font-size: 20px;
+    color: green;
   }
 }

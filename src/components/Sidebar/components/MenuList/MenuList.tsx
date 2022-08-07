@@ -21,11 +21,15 @@ const sidebarMenuItems: Array<IMenuItems> = [
     label: "Карточка автомобиля",
     linkTo: "car-setting",
   },
-  { image: <CarTableLogo />, label: "Список авто", linkTo: "car-table" },
+  { image: <CarTableLogo />, label: "Список авто", linkTo: "cars" },
   { image: <OrdersLogo />, label: "Заказы", linkTo: "orders" },
-  { image: <MenuItemsLogo4 />, label: "Menu 4", linkTo: "menu" },
-  { image: <MenuItemsLogo5 />, label: "Menu 5", linkTo: "menu" },
-  { image: <PersonLogo />, label: "Menu 6", linkTo: "menu" },
+  {
+    image: <MenuItemsLogo4 />,
+    label: "Список категорий",
+    linkTo: "car-categories",
+  },
+  { image: <MenuItemsLogo5 />, label: "Типы тарифов", linkTo: "rate-types" },
+  { image: <PersonLogo />, label: "Список тарифов", linkTo: "rate" },
   { image: <MenuItemsLogo7 />, label: "Menu 7", linkTo: "menu" },
 ];
 
