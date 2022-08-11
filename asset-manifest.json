@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nfd-admin/static/css/main.e0dacf1d.css",
-    "main.js": "/nfd-admin/static/js/main.0f3c962a.js",
+    "main.js": "/nfd-admin/static/js/main.158fad4a.js",
     "static/js/787.4f5f93c0.chunk.js": "/nfd-admin/static/js/787.4f5f93c0.chunk.js",
     "static/media/Helvetica-Oblique.ttf": "/nfd-admin/static/media/Helvetica-Oblique.5c03f243e475af718145.ttf",
     "static/media/Helvetica.ttf": "/nfd-admin/static/media/Helvetica.06113bf748ae7dc33e05.ttf",
@@ -126,11 +126,11 @@
     "static/media/checkbox-on.svg": "/nfd-admin/static/media/checkbox-on.f92f7d1c80950c53c97d.svg",
     "static/media/dropdown.svg": "/nfd-admin/static/media/dropdown.e709e3e8126acd27b6f4998529bcde32.svg",
     "main.e0dacf1d.css.map": "/nfd-admin/static/css/main.e0dacf1d.css.map",
-    "main.0f3c962a.js.map": "/nfd-admin/static/js/main.0f3c962a.js.map",
+    "main.158fad4a.js.map": "/nfd-admin/static/js/main.158fad4a.js.map",
     "787.4f5f93c0.chunk.js.map": "/nfd-admin/static/js/787.4f5f93c0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e0dacf1d.css",
-    "static/js/main.0f3c962a.js"
+    "static/js/main.158fad4a.js"
   ]
 }
